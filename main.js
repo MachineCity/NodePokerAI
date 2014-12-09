@@ -15,4 +15,6 @@ db.serialize(function() {
     });
 });
 
+//Testing
+
 db.close();
