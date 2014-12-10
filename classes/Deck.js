@@ -4,11 +4,12 @@ function Deck () {
     var suits = ['C', 'H', 'D', 'S'];
     for (var i = 0; i < 4; i++)
     {
-        for (var j = 0; j < 13; j++)
+        for (var j = 1; j <= 13; j++)
         {
             this.cards.push(suits[i] + '-' + j);
         }
     }
+    this.shuffle();
     this.shuffle();
 }
 
@@ -28,5 +29,29 @@ Deck.prototype.deal = function (numCards) {
     }
     return hand;
 };
+
+Deck.prototype.checkWinner = function (hands) {
+    //Returns the index for which hand is the winner
+    //Determine the state of each hand and compare
+
+    var ranks = [];
+    for (var i = 0; i < hands.length; i++)
+    {
+        //Determine it's Rank, and value within that rank
+
+        //Check if a flush
+
+    }
+};
+
+var checkRoyalFlush = function (hand) {
+    for (var card = 0; card < hand.length; card++)
+    {
+
+    }
+};
+
+
+
 
 module.exports = new Deck();
