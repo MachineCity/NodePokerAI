@@ -29,9 +29,10 @@ var moneyEarned = 0;
 db.all("SELECT * FROM BasicPlayerMemory ORDER BY id DESC", function (err, rows) {
     var memory = [];
     var newId  = 1;
-    for (var game = 0; game < 1000; game++) {
+    for (var game = 0; game < 1000000; game++) {
         var player   = deck.deal();
         var opponent = deck.deal();
+        deck.shuffle();
         //Find the best weights in the memory
         var weights = [];
         for (var i = 0; i < memory.length; i++) {
