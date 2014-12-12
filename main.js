@@ -20,4 +20,9 @@ db.close();
 
 var deck = require('./classes/Deck.js');
 
-console.log(deck.deal());
+hand1 = deck.deal();
+hand2 = deck.deal();
+var handArr = [];
+handArr.push(hand1);
+handArr.push(hand2);
+console.log(deck.checkWinner(handArr));
